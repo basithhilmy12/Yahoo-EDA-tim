@@ -1,0 +1,13 @@
+dimensi,kolom,masalah,jumlah,persen,keparahan,rencana
+Kelengkapan,berat_kg,Kosong untuk kategori non-fisik (MAR),351,22.75,Rendah,"Tandai tidak berlaku, bukan diisi"
+Keunikan,seluruh kolom,Baris duplikat persis,24,1.56,Sedang,"Hapus, simpan satu"
+Validitas,total_bayar,Format teks bermata uang (Rp),250,16.2,Tinggi,"Bersihkan string ""Rp"" dan konversi ke angka (float/int)"
+Kelengkapan,saldo_simpanan,"Kosong, diduga MNAR",159,10.3,Tinggi,Jangan diimputasi; tanyakan ke pengurus koperasi
+Keunikan,id_transaksi,ID transaksi berulang (duplikat kunci),92,5.96,Tinggi,Telusuri transaksi ganda dan hapus baris duplikat
+Akurasi,total_bayar,Pelanggaran aturan bisnis (total != jumlah x harga x diskon),84,5.44,Tinggi,Hitung ulang total_bayar secara konsisten pada Pertemuan 5
+Konsistensi,id_anggota,Spasi tersembunyi (anggota hantu),59,3.82,Tinggi,Lakukan .str.strip() pada id_anggota
+Kelengkapan,rating_layanan,Placeholder -999,49,3.18,Tinggi,Ubah menjadi NaN sebelum dihitung
+Validitas,jumlah,Nilai nol atau negatif,29,1.88,Tinggi,"Telusuri apakah retur; bila bukan, keluarkan dari analisis"
+Konsistensi,kategori,Satu kategori ditulis beberapa cara,13,0.84,Tinggi,Seragamkan; sinonim diputuskan manual
+Validitas,diskon_persen,Nilai diskon di luar rentang 0-100%,9,0.58,Tinggi,Koreksi atau keluarkan diskon abnormal
+Validitas,tanggal_transaksi,Format tanggal bercampur (ISO vs dd/mm/yyyy),0,0.0,Tinggi,Konversi terpisah berdasarkan format tanggalnya
